@@ -44,10 +44,10 @@ public class Client {
 	}
 	
 	public String toString() {
-		SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-		String dateString = dateFormat.format(birthDate);
-		
-		return "Nome: " + name + "\nEmail: " + email + "\nBirth date: " + dateString;
+		SimpleDateFormat formatterDtNasc = new SimpleDateFormat("dd/MM/yyyy");
+		String formattedDateBirth = formatterDtNasc.format(this.birthDate);
+
+		return "Client: " + this.name + " (" + formattedDateBirth + ") - " + this.email;
 		
 	}
 
